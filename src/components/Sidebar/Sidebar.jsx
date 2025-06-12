@@ -10,13 +10,6 @@ const Sidebar = ({ isOpen, toggleSidebar, filters, setFilters }) => {
     const [fabric, setFabric] = useState([]);
     const [material, setMaterial] = useState([]);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFilters((prev) => ({ ...prev, [name]: value }));
-
-        if (window.innerWidth <= 768) toggleSidebar();
-    };
-
     return (
         <>
             {isOpen && window.innerWidth <= 768 && (

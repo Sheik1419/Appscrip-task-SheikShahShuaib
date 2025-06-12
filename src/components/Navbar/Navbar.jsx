@@ -1,20 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Logo, Search, Heart, Bag, User } from "../../assets/js/Icons.js";
 import ResponsiveNav from "./ResponsiveNav.jsx";
 
 const Navbar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const handleToggle = () => {
-    setTimeout(() => {
-      setIsExpanded((prev) => !prev);
-    }, 300);
-  };
-
   return (
     <>
-      <nav className={`navbar ${isExpanded ? "solid" : ""}`}>
+      <nav className="navbar">
         <div className="navbar-div">
           <ResponsiveNav />
 

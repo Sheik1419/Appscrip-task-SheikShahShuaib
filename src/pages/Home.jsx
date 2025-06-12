@@ -1,4 +1,3 @@
-// Products.jsx
 import React, { useState, useEffect } from "react";
 import ProductComp from "../components/Product/ProductComp.jsx";
 
