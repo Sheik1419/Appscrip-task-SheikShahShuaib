@@ -1,0 +1,27 @@
+:root {
+    /* Colors */
+    --main: #252020;
+    --sub: #f9f9f9;
+    --light: #D6EEDD;
+    --primary: #000;
+    --secondary: #fff;
+    --text-primary: #252020;
+    --text-secondary: #888792;
+    --border: #0000001a;
+    --green: #009400;
+    --red: #DC2626;
+    --box-shadow: 0 0 0.875rem 0 rgba(33, 37, 41, 0.05);
+    --transition-1: 0.25s ease-in-out;
+    --transition-2: 0.5s ease;
+
+    /* Fonts */
+    --primary-font: "Simplon Norm";
+    --secondary-font: "Inter", sans-serif;
+    --fw-ms: 300;
+    --fw-sm: 400;
+    --fw-md: 500;
+    --fw-lg: 600;
+    --fw-xl: 700;
+    --fw-xxl: 800;
+    --fw-xxxl: 900;
+}

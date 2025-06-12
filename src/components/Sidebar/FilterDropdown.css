@@ -1,0 +1,84 @@
+.filter-body,
+.filter-dropdown {
+    margin-top: 10px;
+}
+
+.customize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.customizecheckbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.customizecheckbox h6 {
+    font-size: 13px;
+    font-weight: var(--fw-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-dropdown ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.filter-dropdown li label {
+    font-size: 13px;
+    font-weight: var(--fw-md);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.filter-dropdown input[type="checkbox"] {
+    border-radius: 0px;
+}
+
+.filter-dropdown {
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+}
+
+.filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.filter-header h5 {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: var(--fw-xxl);
+    text-transform: uppercase;
+}
+
+.filter-header h6,
+.filter-actions h6 {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: var(--fw-sm);
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.filter-header h6:hover,
+.filter-actions h6:hover {
+    text-decoration: underline;
+}
+
+.filter-header h6 .active {
+    font-weight: var(--fw-xl);
+    color: var(--primary);
+    text-decoration: underline;
+}
