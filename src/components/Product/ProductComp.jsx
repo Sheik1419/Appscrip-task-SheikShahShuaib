@@ -5,20 +5,8 @@ import SortDropdown from "../Sidebar/SortDropdown.jsx";
 
 const ProductComp = ({ products, wishedItems, toggleWish }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [filters, setFilters] = useState({
-    category: "",
-    maxPrice: "",
-    rating: "",
-  });
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-
-  const filteredProducts = products.filter((product) => {
-    const matchCategory = filters.category ? product.category === filters.category : true;
-    const matchPrice = filters.maxPrice ? product.price <= parseFloat(filters.maxPrice) : true;
-    const matchRating = filters.rating ? product.rating?.rate >= parseFloat(filters.rating) : true;
-    return matchCategory && matchPrice && matchRating;
-  });
 
   return (
     <div className={`splide__track ${sidebarOpen ? "with-sidebar" : ""}`}>
@@ -26,8 +14,6 @@ const ProductComp = ({ products, wishedItems, toggleWish }) => {
         <Sidebar
           isOpen={sidebarOpen}
           toggleSidebar={toggleSidebar}
-          filters={filters}
-          setFilters={setFilters}
         />
 
         <div
@@ -39,7 +25,7 @@ const ProductComp = ({ products, wishedItems, toggleWish }) => {
         >
           <div className="products-header">
             <div className="products-head-left">
-              <h5 className="product-length">{filteredProducts.length} Items</h5>
+              <h5 className="product-length">{products.length} Items</h5>
               <h5 className="respSidebarBtn" onClick={toggleSidebar}>Filters</h5>
               <h6 className="sidebar-toggle" onClick={toggleSidebar}>
                 <i className={`fas ${sidebarOpen ? "fas fa-angle-left" : "fas fa-angle-right"}`}></i>&nbsp;
@@ -56,7 +42,7 @@ const ProductComp = ({ products, wishedItems, toggleWish }) => {
           <hr />
 
           <div className="products-grid">
-            {filteredProducts.map((product, index) => (
+            {products.map((product, index) => (
               <li className="splide__slide" key={index}>
                 <div className="product-content">
                   <div className="product-img">

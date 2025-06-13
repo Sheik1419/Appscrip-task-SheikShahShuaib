@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FilterDropdown from "./FilterDropdown.jsx";
 import "./Sidebar.css";
 
-const Sidebar = ({ isOpen, toggleSidebar, filters, setFilters }) => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
     const [idealFor, setIdealFor] = useState([]);
     const [occasion, setOccasion] = useState([]);
     const [brand, setBrand] = useState([]);
@@ -12,7 +12,7 @@ const Sidebar = ({ isOpen, toggleSidebar, filters, setFilters }) => {
 
     return (
         <>
-            {isOpen && window.innerWidth <= 768 && (
+            {isOpen && window.innerWidth <= 767 && (
                 <div className="sidebar-overlay" onClick={toggleSidebar}></div>
             )}
 
